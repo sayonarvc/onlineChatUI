@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HyperChat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body align="center">
+
+<div class="container">
+
+    <div class="button-wrapper">
+        <button type="button" class="settings">Settings ⚙️</button>
+        <button type="button" class="change-theme">Change theme 🎨</button>
+        <button type="button" class="logout">Logout 🚫</button>
+    </div>
+
+    <div class="general-window">
+        <div class="chat-messages">
+            <template id="message-template">
+
+            </template>
+        </div>
+
+        <form class="message-form">
+            <input type="text" class="message" placeholder="Enter message ✍️">
+            <button type="submit" class="enter-message">Enter 🚀</button>
+        </form>
+
+    </div>
+
+</div>
+
+
+<div class="modal-auth">
+    <div class="modal-content">
+        <button type='button' class="close-auth">❌</button>
+        <h2>Authorization</h2>
+        <div class="auth-form">
+            <input type="email"
+                   class="email-input"
+                   placeholder="Enter you @email ✍️">
+
+            <div class="auth-buttons">
+                <button type="button" class="get-code">Get code 📩</button>
+                <button type="button" class="enter-code">Enter code ✏️</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal-confirmation">
+    <div class="modal-content">
+        <button type='button' class="close-confirm">❌</button>
+        <h2>Confirmation</h2>
+        <div class="confirm-form">
+            <input type="text"
+                   class="code-input"
+                   placeholder="Enter code ✍️">
+
+            <div class="confirm-buttons">
+                <button type="button" class="log-in">Log in🚀</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-settings">
+    <div class="modal-content">
+        <button type='button' class="close-settings">❌</button>
+        <h2>Settings</h2>
+        <div class="settings-form">
+            <input type="text"
+                   class="settings-input"
+                   placeholder="Enter new you name ✍️">
+
+            <div class="settings-buttons">
+                <button type="button" class="change">Change ✅</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="main.ts"></script>
+</body>
+</html>
