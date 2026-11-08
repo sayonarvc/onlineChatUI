@@ -1,0 +1,266 @@
+body {
+    background: linear-gradient(135deg, #e02020, #fce27f, #06307e);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+}
+
+.general-window {
+    width: 100%;
+    max-width: 500px;
+    height: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+    border-style: solid;
+    border-color: #43b8e2;
+    background-color: #885e8d;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-wrapper {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.settings, .logout, .change-theme {
+    border-radius: 15px;
+    overflow: hidden;
+    border-style: solid;
+    border-color: #43b8e2;
+    background-color: #0dd7c1;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.settings:hover, .logout:hover, .get-code:hover, .enter-code:hover, .change:hover, .change-theme:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-form {
+    display: flex;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.message {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 2px solid #43b8e2;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+}
+
+.message::placeholder {
+    color: #666;
+}
+
+.enter-message {
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #43b8e2;
+    background-color: #0dd7c1;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.enter-message:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container-my-message {
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.22);
+    padding: 5px;
+    margin: 5px 5px 5px auto;
+    max-width: 50%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.text {
+    text-align: left;
+    width: 100%;
+    font-size: 17px;
+    font-style: normal;
+    margin: 5px;
+    word-break: break-word;
+}
+
+.date {
+    text-align: right;
+    font-style: italic;
+    margin: 5px;
+}
+
+.user-name {
+    text-align: left;
+    font-style: italic;
+    margin: 5px;
+    font-size: 25px;
+}
+
+.container-other-message {
+    border-radius: 25px;
+    background-color: rgba(173, 86, 222, 0.42);
+    padding: 5px;
+    margin: 5px auto 5px 5px;
+    max-width: 50%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.modal-auth {
+    display: flex; /* по умолчанию появляется модалка */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #885e8d;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #43b8e2;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-auth, .close-confirm, .close-settings {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border: 3px solid #43b8e2;
+    background-color: #0dd7c1;
+}
+
+.modal-content h2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 24px;
+    padding-right: 20px;
+}
+
+.auth-form, .confirm-form, .settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.email-input, .code-input, .settings-input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #43b8e2;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.auth-buttons, .confirm-buttons, .settings-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.get-code, .enter-code, .log-in, .change {
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #43b8e2;
+    background-color: #0dd7c1;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #06307e;
+    transition: all 0.3s ease;
+}
+
+.get-code:hover, .enter-code:hover, .close-auth:hover, .close-confirm:hover, .close-settings:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.modal-confirmation {
+    display: none; /* по умолчанию появляется модалка */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-settings {
+    display: none; /* по умолчанию появляется модалка */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
